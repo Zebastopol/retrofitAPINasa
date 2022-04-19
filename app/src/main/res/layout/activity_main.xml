@@ -27,6 +27,16 @@
         android:textSize="28dp"
         android:textStyle="bold" />
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="7dp">
+
     <EditText
         android:id="@+id/txtFecha"
         android:layout_width="match_parent"
@@ -36,34 +46,18 @@
         android:inputType="textPersonName"
         android:minHeight="48dp" />
 
-    <Button
-        android:id="@+id/btnBuscar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Buscar" />
-
-    <Button
+            <Button
         android:id="@+id/btnImagenDelDia"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Imagen del DÍA" />
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="20dp">
 
             <TextView
                 android:id="@+id/txtTituloImagen"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:textAlignment="center"
+                android:gravity="bottom|center"
                 android:hint="Titulo"
                 android:inputType="textPersonName"
                 android:minHeight="50dp" />
@@ -79,9 +73,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="Autor"
                 android:inputType="textPersonName"
-                android:minHeight="48dp" />
+                android:minHeight="48dp"
+                tools:ignore="SpeakableTextPresentCheck" />
 
             <TextView
                 android:id="@+id/txtDescripcion"
@@ -91,15 +85,6 @@
                 android:gravity="start|top"
                 android:hint="Descripción"
                 android:inputType="textMultiLine"
-                android:minHeight="48dp" />
-
-            <TextView
-                android:id="@+id/txtUrl"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="HDurl"
-                android:inputType="textPersonName"
                 android:minHeight="48dp" />
 
         </LinearLayout>

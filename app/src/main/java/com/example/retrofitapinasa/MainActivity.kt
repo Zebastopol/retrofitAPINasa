@@ -47,8 +47,6 @@ class MainActivity : AppCompatActivity() {
                                 binding.txtTituloImagen.text = i.title
                                 binding.txtDescripcion.text = i.explanation
                                 binding.txtAutor.text = i.copyright
-                                binding.txtUrl.text = i.hdurl
-                                //binding.textImagen.text = "Imagen del Día \n"
 
                                 CoroutineScope(Dispatchers.IO).launch {
                                     val x: Int = async {
@@ -74,8 +72,8 @@ class MainActivity : AppCompatActivity() {
     fun construirImagenDia(i: ImagenNasa): Int{
         runOnUiThread {
             Glide.with(applicationContext)
-                .load(i.url)
-                .override(1090, 1550)
+                .load(i.hdurl)
+                .override(1090, 2050)
                 .into(binding.imageView)
         }
         return 1
